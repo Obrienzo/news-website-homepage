@@ -3,58 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="Frontend mentor challenge to build out a news website homepage">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
+  <header>
+    <nav class="page__navigation">
+      <div class="page__logo">
+        <a href="./index.html">
+          <img src="./assets/images/logo.svg" alt="page logo" />
+        </a>
+      </div>
+      <button class="menu__dropdown" aria-controls="page-links" data-open="false">
+        <!-- mask image of the menu hamburger and close icons -->
+      </button>
+      <ul id="page-links" class="navigation__links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">New</a>
+        </li>
+        <li>
+          <a href="#">Popular</a>
+        </li>
+        <li>
+          <a href="#">Trending</a>
+        </li>
+        <li>
+          <a href="#">Categories</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+
+  <main>
+    <article class="breaking-news__wrapper">
+      <div class="news-banner">
+        <picture>
+          <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 768px)" />
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="">
+        </picture>
+      </div>
+      <section class="news-details">
+        <h1>The Bright Future of Web 3.0?</h1>
+        <p>
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+        </p>
+        <a href="" class="cta read-more">Read More</a>
+      </section>
+    </article>
+
+    <section class="additional-news__wrapper">
+      <h2>New</h2>
+      <ol>
+        <li>
+          <a href="#">Hydrogen VS Electric Cars</a>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </li>
+        <li>
+          <a href="#">The Downsides of AI Artistry</a>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </li>
+        <li>
+          <a href="#">Is VC Funding Drying Up?</a>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="other-news">
+      <ol>
+        <li>
+          <img src="./assets/images/image-retro-pcs.jpg" alt="">
+          <div class="other-details">
+            <h3>01</h3>
+            <a href="#">Reviving Retro PCs</a>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </li>
+        <li>
+          <img src="./assets/images/image-top-laptops.jpg" alt="">
+          <div class="other-details">
+            <h3>02</h3>
+            <a href="#">Top 10 Laptops of 2022</a>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </li>
+        <li>
+          <img src="./assets/images/image-gaming-growth.jpg" alt="">
+          <div class="other-details">
+            <h3>03</h3>
+            <a href="#">The Growth of Gaming</a>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+  </main>
+
 </body>
 </html>
