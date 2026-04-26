@@ -151,7 +151,7 @@ header {
 
 main {
   padding: 1.6rem;
-  max-width: 127rem;
+  max-width: 120rem;
   margin: auto;
 }
 
@@ -393,6 +393,7 @@ h1 {
 
 @media screen and (min-width: 1024px) {
   main {
+    column-gap: 2.2rem;
     row-gap: 2.5rem;
   }
 
