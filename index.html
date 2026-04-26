@@ -1,113 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <meta name="description" content="Frontend mentor challenge to build out a news website homepage">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta
+      name="description"
+      content="Frontend mentor challenge to build out a news website homepage"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | News homepage</title>
-  <link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-</head>
-<body>
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="overlay" aria-hidden="true" data-show="false"></div>
+    <header>
+      <nav class="page__navigation">
+        <div class="page__logo">
+          <a href="./index.html">
+            <img src="./assets/images/logo.svg" alt="page logo" />
+          </a>
+        </div>
+        <button
+          class="navigation__menu"
+          aria-controls="page-links"
+          aria-label="Open menu"
+          aria-expanded="false"
+          data-open="false"
+        >
+          <!-- mask image of the menu hamburger and close icons -->
+        </button>
+        <div id="page-links" class="navigation__links" aria-hidden="true">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">New</a>
+            </li>
+            <li>
+              <a href="#">Popular</a>
+            </li>
+            <li>
+              <a href="#">Trending</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <header>
-    <nav class="page__navigation">
-      <div class="page__logo">
-        <a href="./index.html">
-          <img src="./assets/images/logo.svg" alt="page logo" />
-        </a>
-      </div>
-      <button class="menu__dropdown" aria-controls="page-links" data-open="false">
-        <!-- mask image of the menu hamburger and close icons -->
-      </button>
-      <ul id="page-links" class="navigation__links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">New</a>
-        </li>
-        <li>
-          <a href="#">Popular</a>
-        </li>
-        <li>
-          <a href="#">Trending</a>
-        </li>
-        <li>
-          <a href="#">Categories</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  
+    <main>
+      <article class="breaking-news">
+        <div class="breaking-news__banner">
+          <picture>
+            <source
+              srcset="./assets/images/image-web-3-desktop.jpg"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./assets/images/image-web-3-mobile.jpg"
+              fetchpriority="high"
+              alt="Abstract colorful geometric shapes"
+            />
+          </picture>
+        </div>
+        <section class="breaking-news__details">
+          <h1>The Bright Future of Web 3.0?</h1>
+          <p>
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <a href="#" class="breaking-news__cta read-more">Read More</a>
+        </section>
+      </article>
 
-  <main>
-    <article class="breaking-news__wrapper">
-      <div class="news-banner">
-        <picture>
-          <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 768px)" />
-          <img src="./assets/images/image-web-3-mobile.jpg" alt="">
-        </picture>
-      </div>
-      <section class="news-details">
-        <h1>The Bright Future of Web 3.0?</h1>
-        <p>
-          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
-        </p>
-        <a href="" class="cta read-more">Read More</a>
+      <section class="additional-news">
+        <h2 class="additional-news__title">New</h2>
+        <ol class="additional-news__list">
+          <li aria-labelledby="additional-news-item-1-title">
+            <a id="additional-news-item-1-title" href="#">
+              Hydrogen VS Electric Cars
+            </a>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </li>
+          <li aria-labelledby="additional-news-item-2-title">
+            <a id="additional-news-item-2-title" href="#">
+              The Downsides of AI Artistry
+            </a>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </li>
+          <li aria-labelledby="additional-news-item-3-title">
+            <a id="additional-news-item-3-title" href="#">
+              Is VC Funding Drying Up?
+            </a>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </li>
+        </ol>
       </section>
-    </article>
 
-    <section class="additional-news__wrapper">
-      <h2>New</h2>
-      <ol>
-        <li>
-          <a href="#">Hydrogen VS Electric Cars</a>
-          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-        </li>
-        <li>
-          <a href="#">The Downsides of AI Artistry</a>
-          <p>What are the possible adverse effects of on-demand AI image generation?</p>
-        </li>
-        <li>
-          <a href="#">Is VC Funding Drying Up?</a>
-          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="other-news">
-      <ol>
-        <li>
-          <img src="./assets/images/image-retro-pcs.jpg" alt="">
-          <div class="other-details">
-            <h3>01</h3>
-            <a href="#">Reviving Retro PCs</a>
-            <p>What happens when old PCs are given modern upgrades?</p>
-          </div>
-        </li>
-        <li>
-          <img src="./assets/images/image-top-laptops.jpg" alt="">
-          <div class="other-details">
-            <h3>02</h3>
-            <a href="#">Top 10 Laptops of 2022</a>
-            <p>Our best picks for various needs and budgets.</p>
-          </div>
-        </li>
-        <li>
-          <img src="./assets/images/image-gaming-growth.jpg" alt="">
-          <div class="other-details">
-            <h3>03</h3>
-            <a href="#">The Growth of Gaming</a>
-            <p>How the pandemic has sparked fresh opportunities.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-  </main>
-
-</body>
+      <section class="other-news">
+        <ol class="other-news__list">
+          <li aria-labelledby="other-news-item-1-title">
+            <img
+              class="other-news__img"
+              src="./assets/images/image-retro-pcs.jpg"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+            />
+            <div class="other-news__details">
+              <span aria-hidden="true">01</span>
+              <a id="other-news-item-1-title" href="#"> Reviving Retro PCs </a>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </li>
+          <li aria-labelledby="other-news-item-2-title">
+            <img
+              class="other-news__img"
+              src="./assets/images/image-top-laptops.jpg"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+            />
+            <div class="other-news__details">
+              <span aria-hidden="true">02</span>
+              <a id="other-news-item-2-title" href="#">
+                Top 10 Laptops of 2022
+              </a>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </li>
+          <li aria-labelledby="other-news-item-3-title">
+            <img
+              class="other-news__img"
+              src="./assets/images/image-gaming-growth.jpg"
+              alt=""
+              loading="lazy"
+              aria-hidden="true"
+            />
+            <div class="other-news__details">
+              <span aria-hidden="true">03</span>
+              <a id="other-news-item-3-title" href="#">
+                The Growth of Gaming
+              </a>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </main>
+  </body>
 </html>
